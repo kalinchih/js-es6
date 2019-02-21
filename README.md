@@ -1,4 +1,4 @@
-# es6
+# js-es6
 
 Learn Material
 
