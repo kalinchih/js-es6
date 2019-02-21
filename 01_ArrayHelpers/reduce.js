@@ -54,3 +54,48 @@ var isBalancedParens = balancedParens("((xx))");
 console.log(isBalancedParens);
 isBalancedParens = balancedParens(")xx(");
 console.log(isBalancedParens);
+
+////////////////
+
+var desks = [
+  { type: "sitting" },
+  { type: "standing" },
+  { type: "sitting" },
+  { type: "sitting" },
+  { type: "standing" }
+];
+
+var deskTypes = desks.reduce(
+  function(deskType, desk) {
+    if (desk.type === "sitting") {
+      deskType.sitting++;
+    } else if (desk.type === "standing") {
+      deskType.standing++;
+    }
+    return deskType;
+  },
+  { sitting: 0, standing: 0 }
+);
+
+console.log(deskTypes);
+
+//////////////////////
+
+function unique(array) {
+  return array.reduce(function(uniqueArray, i) {
+    if (!contains(uniqueArray, i)) {
+      uniqueArray.push(i);
+    }
+    return uniqueArray;
+  }, []);
+}
+
+function contains(uniqueArray, obj) {
+  return uniqueArray.find(function(o) {
+    return o === obj;
+  });
+}
+
+var numbers = [1, 1, 2, 3, 4, 4];
+var uniqueNumbers = unique(numbers);
+console.log(uniqueNumbers);
