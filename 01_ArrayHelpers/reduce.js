@@ -6,7 +6,7 @@ var sum = numbers.reduce(function(sum, number) {
 
 console.log(sum);
 
-////
+///////////////
 
 var colors = [{ color: "red" }, { color: "blue" }, { color: "yellow" }];
 
@@ -22,6 +22,17 @@ var colors2 = colors.reduce(function(colors2, c) {
 }, []);
 
 console.log(colors2);
+
+///////////////
+
+var trips = [{ distance: 34 }, { distance: 12 }, { distance: 1 }];
+
+var totalDistance = trips.reduce(function(sum, trip) {
+  return sum + trip.distance;
+}, 0);
+
+console.log(totalDistance);
+
 ///////////////
 
 function balancedParens(text) {
