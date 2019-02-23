@@ -18,6 +18,10 @@ console.log(add3(4, 8));
 const double = number => number * 2;
 console.log(double(5));
 
+// ES6 - zero argument, use ()
+const today = () => new Date();
+console.log(today());
+
 // ES6 - advanced
 const numbers = [1, 2, 3];
 const doubleNumbers1 = numbers.map(function(number) {
