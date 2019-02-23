@@ -6,6 +6,7 @@ var cars = [
   }
 ];
 
+// create another array which is mapped from cars.price
 var prices = cars.map(function(car) {
   return car.price;
 });
